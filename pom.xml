@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>TestSkyBuy</groupId>
+  <artifactId>SkyBuy</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>SkyBuy</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <dependencies>
+   <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.11</version>
+   </dependency>
+   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+ <dependency>
+     <groupId>org.seleniumhq.selenium</groupId>
+     <artifactId>selenium-java</artifactId>
+     <version>3.4.0</version>
+ </dependency>   
+ <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+ <dependency>
+     <groupId>org.apache.maven.plugins</groupId>
+     <artifactId>maven-compiler-plugin</artifactId>
+     <version>3.6.1</version>
+ </dependency> 
+ <!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-api -->
+ <dependency>
+     <groupId>org.apache.maven.surefire</groupId>
+     <artifactId>surefire-api</artifactId>
+     <version>2.20</version>
+ </dependency> 
+ <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+<dependency>
+    <groupId>com.jcraft</groupId>
+    <artifactId>jsch</artifactId>
+    <version>0.1.54</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.1.4</version>
+</dependency>
+
+  </dependencies>
+  
+  <build>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.20</version>
+    <configuration>
+        <enableAssertions>true</enableAssertions>
+    </configuration>
+  </plugin>
+    </plugins>
+  </build>
+  
+</project>
