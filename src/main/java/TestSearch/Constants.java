@@ -1,4 +1,4 @@
-package TestSkyBuy.SkyBuy;
+package TestSearch;
 
 public class Constants {
     public static final String url = "skyz-11514.stlaboratory.ru";
